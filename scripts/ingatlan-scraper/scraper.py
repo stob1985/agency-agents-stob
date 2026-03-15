@@ -14,9 +14,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
@@ -279,39 +277,22 @@ def extract_from_soup(soup: BeautifulSoup, district_label: str) -> list[dict]:
 
 # ── Böngésző indítás ────────────────────────────────────────────────────────
 
-def make_driver() -> webdriver.Chrome:
-    opts = Options()
-    opts.binary_location = CHROME_BIN
+def make_driver() -> uc.Chrome:
+    opts = uc.ChromeOptions()
     opts.add_argument("--headless=new")
     opts.add_argument("--no-sandbox")
     opts.add_argument("--disable-dev-shm-usage")
-    opts.add_argument("--disable-blink-features=AutomationControlled")
     opts.add_argument("--window-size=1366,768")
     opts.add_argument("--lang=hu-HU")
-    opts.add_argument("--disable-extensions")
-    opts.add_argument("--disable-infobars")
     opts.add_argument("--disable-gpu")
     opts.add_argument("--disable-software-rasterizer")
-    opts.add_argument(
-        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/145.0.0.0 Safari/537.36"
+
+    driver = uc.Chrome(
+        options=opts,
+        browser_executable_path=CHROME_BIN,
+        driver_executable_path=CHROMEDRIVER_PATH,
+        headless=True,
     )
-    opts.add_experimental_option("excludeSwitches", ["enable-automation"])
-    opts.add_experimental_option("useAutomationExtension", False)
-
-    svc = Service(executable_path=CHROMEDRIVER_PATH)
-    driver = webdriver.Chrome(service=svc, options=opts)
-
-    # Anti-detection JS
-    driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-        "source": """
-            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-            Object.defineProperty(navigator, 'plugins', { get: () => [1,2,3,4,5] });
-            Object.defineProperty(navigator, 'languages', { get: () => ['hu-HU','hu','en-US','en'] });
-            window.chrome = { runtime: {} };
-        """
-    })
     return driver
 
 
