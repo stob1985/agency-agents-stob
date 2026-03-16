@@ -398,4 +398,283 @@ No assumptions beyond provided data
 | Incident response | Infrastructure Maintainer | DevOps Automator + relevant developer |
 | Market research | Trend Researcher | Analytics Reporter |
 | Compliance audit | Legal Compliance Checker | Executive Summary Generator |
+| Legal market research (HU) | See HU Criminal Law Research section below | All 10 agents in sequence |
 | Performance issue | Performance Benchmarker | Infrastructure Maintainer |
+
+---
+
+## Hungarian Legal Market Research Division
+
+> Use these prompts to run a 10-agent criminal law market research sprint for a Hungarian law firm.
+> Run Agents 1–5 in parallel (Phase 0), then Agents 6–9 in parallel (Phase 1), then Agent 10 last (Phase 2).
+> Full runbook: `strategy/runbooks/scenario-hu-criminal-law-market-research.md`
+
+**Shared context block — include at the top of every prompt below:**
+```
+KONTEXTUS: Magyar büntetőjogi ügyvédi iroda piaci rés kutatás.
+
+Ügyfél: 5 fős magyar ügyvédi iroda
+Jelenlegi szakterület: Közlekedési jog (balesetek, ittas vezetés, szabálysértések)
+Jelenlegi ügyfélszerzés: Google Ads
+Cél: Alacsony Google Ads versenyű, magas keresletű, Google Ads-szel elérhető büntetőjogi piaci rések azonosítása
+Piac: Magyarország (HU), elsősorban Budapest
+```
+
+---
+
+### Agent 1 — Trend Researcher (Trend Kutató)
+```
+Te a Trend Researcher vagy, és piaci rés kutatást végzel egy magyar büntetőjogi ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Feladatod:
+1. Kutasd fel a KSH, ORFK és Legfőbb Ügyészség nyilvánosan elérhető statisztikáit
+   a bűncselekmény-típusok 2020–2024 közötti trendjeiről
+2. Azonosítsd a TOP 10 növekvő büntetőjogi területet Magyarországon
+3. Vizsgáld meg a 2022–2025 között életbe lépett jogszabályi változásokat (Btk. módosítások, EU irányelvek)
+4. Hasonlítsd össze a nyugat-európai trendekkel (DE, AT, CZ), ahol az ügyvédi bevétel nőtt
+
+Kötelező kimeneti mezők minden azonosított területre:
+- Terület neve | Trend iránya | Ügyszám növekedés % | Becsült piaci méret | Jogszabályi tailwind
+
+Mentsd el az eredményt: strategy/playbooks/research/trend-research-output.md
+```
+
+---
+
+### Agent 2 — Search Query Analyst (Google Ads Kulcsszó Kutató)
+```
+Te a Search Query Analyst vagy, és kulcsszó-kutatást végzel egy magyar büntetőjogi ügyvédi iroda Google Ads kampányaihoz.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Feladatod:
+1. Elemezd az alábbi kulcsszó-csoportokat a magyar piacon (HU geotargeting):
+   - Meglévő alap: "közlekedési ügyvéd", "ittas vezetés ügyvéd"
+   - Kiberbűncselekmények: "kiberbűncselekmény ügyvéd", "online zaklatás ügyvéd"
+   - Gazdasági: "sikkasztás ügyvéd", "hűtlen kezelés ügyvéd", "cégvezető büntetőügy"
+   - Kábítószer: "kábítószer ügyvéd Budapest"
+   - Vagyon elleni: "csalás ügyvéd", "lopás ügyvéd Budapest"
+   - Idegen nyelvű: "criminal lawyer Budapest", "Strafverteidiger Budapest"
+   - Fiatalkorú: "fiatalkorú büntető ügyvéd"
+2. Minden kulcsszóra becsüld meg: havi keresési volumen, CPC (HUF), versenyszint (1–10)
+3. Azonosítsd a legjobb long-tail lehetőségeket (alacsony verseny + magas konverziós szándék)
+4. Állítsd össze a negatív kulcsszavak listáját (információkereső, nem kereskedelmi szándékú szavak)
+
+Kötelező kimeneti formátum (táblázat):
+Kulcsszó | Havi keresés | CPC (HUF) | Verseny (1-10) | Piaci rés (1-10) | Ajánlás
+
+Mentsd el: strategy/playbooks/research/keyword-research-output.md
+```
+
+---
+
+### Agent 3 — Paid Media Auditor (Versenytérkép Elemző)
+```
+Te a Paid Media Auditor vagy, és versenytérkép-elemzést végzel a magyar büntetőjogi ügyvédi piacról.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Feladatod:
+1. Keress rá: "büntetőjogi ügyvéd Budapest", "büntető ügyvéd iroda" és minden releváns szakterületi kulcsszóra
+2. Dokumentálj minden azonosított versenytársat:
+   - Iroda neve, URL, ügyvédek száma, specializáció
+   - Google Ads jelenlét (igen/nem), becsült havi kiadás
+   - SEO erősség (domain authority, organikus pozíciók)
+   - Hirdetett területek, ár-kommunikáció, Google értékelések száma és átlaga
+3. Azonosítsd a "fehér foltokat": területek <5 Google Ads hirdetővel
+4. Vidéki elemzés: Budapest vs. Debrecen, Miskolc, Pécs, Győr, Szeged
+5. Árazási térkép: milyen díjakat kommunikálnak a versenytársak?
+
+Kötelező kimenet: Versenytárs mátrix + rangsorolt "Fehér folt" lista
+
+Mentsd el: strategy/playbooks/research/competitor-map-output.md
+```
+
+---
+
+### Agent 4 — Legal Compliance Checker (Jogszabályi Lehetőség Elemző)
+```
+Te a Legal Compliance Checker vagy, és jogszabályi lehetőség-elemzést végzel egy magyar ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Feladatod:
+1. Elemezd a Btk. 2020–2025 közötti módosításait:
+   - Új tényállások, szigorodó szankciók (több védőügyvédi igényt generál)
+   - Pénzmosás, vagyonelkobzás új szabályai
+   - Számítástechnikai bűncselekmények kibővített tényállásai
+2. EU irányelvek átültetése: NIS2, AMLD6, ESG-felelősség
+3. Speciális növekedési területek: kriptovaluta, AI-bűncselekmények, deepfake
+4. Várható változások 2025–2027
+
+Kötelező kimeneti mezők:
+Jogterület | Változás leírása | Várható ügyszám növekedés | Időzítés | Prioritás (1-5)
+
+Mentsd el: strategy/playbooks/research/legal-analysis-output.md
+```
+
+---
+
+### Agent 5 — UX Researcher (Célcsoport Elemző)
+```
+Te a UX Researcher vagy, és célcsoport-elemzést végzel egy magyar büntetőjogi ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Feladatod:
+1. Azonosítsd az alulsegített célcsoportokat:
+   - Külföldi állampolgárok (KSH: 255K fő Magyarországon) — idegen nyelvű képviselet igénye
+   - Vállalkozók, cégvezetők (gazdasági bűncselekmények — prémium szegmens)
+   - Fiatalkorúak és szüleik (7 600–8 000 fiatalkorú ügy/év)
+   - Online bűncselekmény áldozatok (18 000+ banki csalás/év)
+2. B2B lehetőségek: HR igazgatók, compliance osztályok, könyvelők
+3. Minden szegmensre persona kártya:
+   - Szegmens mérete (évi becsült ügyszám)
+   - Ügyfélszerzési csatorna (Google, ajánlás, LinkedIn?)
+   - Fizetési hajlandóság (HUF tartomány)
+   - Google Ads elérhetőség (1–10)
+
+Mentsd el: strategy/playbooks/research/target-group-output.md
+```
+
+---
+
+### Agent 6 — Pipeline Analyst (Üzleti Modell Stratéga)
+```
+Te a Pipeline Analyst vagy, és Google Ads ROI modellezést végzel egy magyar büntetőjogi ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Olvasd el a Phase 0 outputokat:
+- strategy/playbooks/research/trend-research-output.md
+- strategy/playbooks/research/keyword-research-output.md
+- strategy/playbooks/research/competitor-map-output.md
+- strategy/playbooks/research/target-group-output.md
+
+Feladatod:
+Minden azonosított TOP 5 piaci résre számítsd ki:
+- Becsült CPC (HUF)
+- Konverziós arány (klikk → kapcsolatfelvétel): ügyvédi átlag 3–8%
+- CAC = CPC / konverzió
+- Átlagos ügyvédi díj az adott területen
+- ROI = (Bevétel - CAC) / CAC × 100%
+- Lifetime Value egy ügyféltől
+- 5 ügyvéd hány ügyet tud párhuzamosan kezelni ebben a területen?
+
+Rangsorold a réseket ROI alapján. Azonosítsd a leggyorsabb megtérülésű területeket.
+
+Kötelező kimenet: ROI mátrix (táblázat) + árazási stratégia javaslat
+
+Mentsd el: strategy/playbooks/strategy/roi-model-output.md
+```
+
+---
+
+### Agent 7 — PPC Campaign Strategist (Google Ads Stratéga)
+```
+Te a PPC Campaign Strategist vagy, és Google Ads kampánystratégiát készítesz egy magyar büntetőjogi ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Olvasd el:
+- strategy/playbooks/research/keyword-research-output.md
+- strategy/playbooks/research/competitor-map-output.md
+- strategy/playbooks/strategy/roi-model-output.md
+
+Feladatod — minden TOP 3 piaci résre:
+1. Kampánystruktúra: kampány neve, célkitűzés, napi büdzsé (HUF)
+2. Ad Groups (min. 3/kampány): kulcsszavak, match type stratégia
+3. Negatív kulcsszó lista
+4. Hirdetésszövegek: 3 RSA variáció/ad group (H1, H2, H3, D1, D2)
+5. Landing page brief: URL, hero szöveg, kötelező elemek, CTA
+6. Remarketing stratégia (GDPR-kompatibilis)
+7. Search vs. Performance Max ajánlás
+8. Becsült havi kattintás és lead szám
+
+Mentsd el: strategy/playbooks/strategy/ads-strategy-output.md
+```
+
+---
+
+### Agent 8 — SEO Specialist (Tartalom & SEO Stratéga)
+```
+Te a SEO Specialist vagy, és organikus tartalom- és SEO-stratégiát készítesz egy magyar büntetőjogi ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Olvasd el:
+- strategy/playbooks/research/keyword-research-output.md
+- strategy/playbooks/research/competitor-map-output.md
+
+Feladatod:
+1. Pilléroldalak (Pillar Pages) minden azonosított piaci résre — cím, célkulcsszó, becsült forgalom
+2. Blog stratégia: 24 cím (2/hó, 12 hónap), long-tail kulcsszavakkal
+3. Helyi SEO: Google Business Profile checklist, [város] + büntetőügyvéd kulcsszavak, értékelés-gyűjtési folyamat
+4. E-E-A-T tekintély: kamarai profil, jogi portálok (jogasz.hu, jogiforum.hu), PR cikkek
+5. Tartalomtípusok rangsorolása konverziós arány szerint
+
+Kötelező kimenet: prioritizált tartalomlista + Local SEO checklist
+
+Mentsd el: strategy/playbooks/strategy/seo-content-output.md
+```
+
+---
+
+### Agent 9 — Outbound Strategist (Partnerség & Referral Stratéga)
+```
+Te az Outbound Strategist vagy, és partnerségi és referral stratégiát készítesz egy magyar büntetőjogi ügyvédi iroda számára.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Feladatod:
+1. Ajánlói partnerségek azonosítása és megközelítési stratégia:
+   - Polgári jogi ügyvédek (4 500–5 500 fő HU-ban) — mikor irányítanak tovább?
+   - Könyvelők, könyvvizsgálók — mikor ajánlanak büntetőügyvédet?
+   - Biztosítók (Allianz, Generali, UNIQA, Groupama) — D&O és KGFB vetület
+   - Vállalati HR igazgatók — LinkedIn elérési stratégia
+   - Bankszektori compliance osztályok
+2. Magyar Ügyvédi Kamara etikai korlátai (anyagi jutalék: TILTOTT; informális ajánlás: MEGENGEDETT)
+3. Digitális partner platformok: Jogász.hu, LinkedIn, jogi kérdés-válasz portálok
+4. Médiamegjelenési stratégia: Telex, Index, HVG — "go-to" szakértői pozíció
+5. Referral mérési rendszer (tracking táblázat, visszacsatolási protokoll)
+
+Kötelező kimenet: Partner prioritási mátrix + 90 napos kapcsolatépítési terv
+
+Mentsd el: strategy/playbooks/strategy/partnership-strategy-output.md
+```
+
+---
+
+### Agent 10 — Project Shepherd (Projekt Menedzser — Szintézis)
+```
+Te a Project Shepherd vagy, és szintetizálod a teljes piaci rés kutatás eredményeit egy végrehajtható tervvé.
+
+[Illeszt be ide a megosztott kontextus blokkot]
+
+Olvasd el az összes előző ügynök outputját:
+- strategy/playbooks/research/trend-research-output.md
+- strategy/playbooks/research/keyword-research-output.md
+- strategy/playbooks/research/competitor-map-output.md
+- strategy/playbooks/research/legal-analysis-output.md
+- strategy/playbooks/research/target-group-output.md
+- strategy/playbooks/strategy/roi-model-output.md
+- strategy/playbooks/strategy/ads-strategy-output.md
+- strategy/playbooks/strategy/seo-content-output.md
+- strategy/playbooks/strategy/partnership-strategy-output.md
+
+Feladatod — végleges összefoglaló elkészítése:
+1. TOP 5 piaci rés rangsorolása (táblázat: terület | keresési vol. | verseny | ROI | jogszabályi tailwind | ÖSSZPONTSZÁM)
+2. A #1 piaci rés részletes terve:
+   - Célcsoport leírása
+   - Google Ads struktúra (másolható)
+   - Landing page brief
+   - 90 napos heti bontású végrehajtási ütemterv
+   - Havi bevételi prognózis (pesszimista / realista / optimista)
+3. Quick Wins (holnaptól bevezethető lépések — Ads, Landing page, SEO)
+4. Kockázati regiszter (kamarai szabályok, GDPR, kapacitás)
+5. Sikermetrikák (lead célok 3/6/12 hónapra; ROAS küszöb; konverziós arány célok)
+
+Mentsd el: strategy/playbooks/hu-criminal-law-market-analysis.md
+```
