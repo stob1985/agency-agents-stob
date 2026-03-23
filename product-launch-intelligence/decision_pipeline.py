@@ -119,7 +119,6 @@ def _stream_decision_agent(
         max_tokens=MAX_TOKENS,
         system=system_prompt,
         messages=messages,
-        thinking={"type": "adaptive"},
     ) as stream:
         for event in stream:
             if (
