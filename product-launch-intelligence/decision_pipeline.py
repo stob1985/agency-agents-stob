@@ -74,6 +74,12 @@ def _build_user_message_for_decision_agent(
         return (
             f"{product_block}\n\n"
             "---\n\n"
+            "**Business Context:** This analysis is prepared for a **dropshipping business**. "
+            "All recommendations must be evaluated through a dropshipping lens: "
+            "no inventory held, products sourced from AliExpress/CJ Dropshipping suppliers, "
+            "margins must absorb supplier cost + shipping + platform fees without bulk pricing, "
+            "and speed-to-market is a key advantage. "
+            "Avoid recommendations that require custom manufacturing, large MOQs, or significant upfront capital.\n\n"
             "Please analyze this product and provide your full Feedback Synthesis report, "
             "focusing on competitor review gaps and unmet customer needs in this category."
         )
