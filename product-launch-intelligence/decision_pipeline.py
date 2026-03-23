@@ -12,7 +12,7 @@ import anthropic
 from scraper import ProductData
 
 
-MODEL = "claude-opus-4-6"
+MODEL = "claude-sonnet-4-5"
 MAX_TOKENS = 64000  # streaming; give agents plenty of room
 
 DECISION_AGENTS_DIR = Path(__file__).parent / "agents" / "decision"
