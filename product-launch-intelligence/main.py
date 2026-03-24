@@ -154,10 +154,13 @@ def main() -> None:
     total_in = sum(r.input_tokens for r in all_results)
     total_out = sum(r.output_tokens for r in all_results)
 
+    html_path = report_path.with_suffix(".html")
+
     print(f"\n{'═' * 64}")
     print("  Report complete!")
     print(f"{'═' * 64}")
-    print(f"\n  Saved to: {report_path}")
+    print(f"\n  Markdown: {report_path}")
+    print(f"  HTML:     {html_path}")
     print(f"  Tokens:   {total_in + total_out:,} total ({total_in:,} in / {total_out:,} out)\n")
 
 

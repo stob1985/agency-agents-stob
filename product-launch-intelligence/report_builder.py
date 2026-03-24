@@ -1,14 +1,58 @@
 """
 report_builder.py — Formats the pipeline output into a structured markdown report.
 Handles launch reports, decision pack reports, and combined full reports.
+Also exports HTML versions using the markdown library.
 """
 
 import re
+import markdown as md_lib
 from datetime import datetime, timezone
 from pathlib import Path
 
 from pipeline import PipelineResult
 from decision_pipeline import DecisionPipelineResult
+
+
+_HTML_TEMPLATE = """\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <style>
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+           max-width: 960px; margin: 40px auto; padding: 0 24px;
+           color: #1a1a1a; line-height: 1.7; background: #fff; }}
+    h1 {{ font-size: 2em; border-bottom: 3px solid #2563eb; padding-bottom: 12px; color: #1e3a5f; }}
+    h2 {{ font-size: 1.4em; margin-top: 2em; color: #1e3a5f; border-left: 4px solid #2563eb; padding-left: 10px; }}
+    h3 {{ font-size: 1.1em; color: #374151; }}
+    table {{ border-collapse: collapse; width: 100%; margin: 1em 0; }}
+    th, td {{ border: 1px solid #d1d5db; padding: 8px 12px; text-align: left; }}
+    th {{ background: #eff6ff; font-weight: 600; }}
+    tr:nth-child(even) {{ background: #f9fafb; }}
+    code {{ background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }}
+    pre {{ background: #f3f4f6; padding: 16px; border-radius: 8px; overflow-x: auto; }}
+    pre code {{ background: none; padding: 0; }}
+    blockquote {{ border-left: 4px solid #2563eb; margin: 0; padding: 8px 16px; background: #eff6ff; color: #374151; }}
+    hr {{ border: none; border-top: 1px solid #e5e7eb; margin: 2em 0; }}
+    a {{ color: #2563eb; }}
+  </style>
+</head>
+<body>
+{body}
+</body>
+</html>
+"""
+
+
+def _md_to_html(markdown_text: str, title: str = "Report") -> str:
+    """Convert a markdown string to a full HTML document."""
+    body = md_lib.markdown(
+        markdown_text,
+        extensions=["tables", "fenced_code", "toc"],
+    )
+    return _HTML_TEMPLATE.format(title=title, body=body)
 
 
 REPORTS_DIR = Path(__file__).parent / "reports"
@@ -160,6 +204,7 @@ def save_report(result: PipelineResult, output_dir: Path | None = None) -> Path:
     Save the launch pipeline markdown report to a file and return the file path.
 
     File naming: reports/<slug>_<timestamp>.md
+    Also saves an HTML version at the same path with .html extension.
     """
     out_dir = output_dir or REPORTS_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -171,6 +216,12 @@ def save_report(result: PipelineResult, output_dir: Path | None = None) -> Path:
 
     report_text = build_report(result)
     filepath.write_text(report_text, encoding="utf-8")
+
+    html_path = filepath.with_suffix(".html")
+    html_path.write_text(
+        _md_to_html(report_text, title=f"Launch Report — {result.product.title}"),
+        encoding="utf-8",
+    )
 
     return filepath
 
@@ -276,6 +327,7 @@ def save_decision_report(result: DecisionPipelineResult, output_dir: Path | None
     Save the Decision Pack markdown report to a file and return the file path.
 
     File naming: reports/<slug>_decision_<timestamp>.md
+    Also saves an HTML version at the same path with .html extension.
     """
     out_dir = output_dir or REPORTS_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -287,6 +339,12 @@ def save_decision_report(result: DecisionPipelineResult, output_dir: Path | None
 
     report_text = build_decision_report(result)
     filepath.write_text(report_text, encoding="utf-8")
+
+    html_path = filepath.with_suffix(".html")
+    html_path.write_text(
+        _md_to_html(report_text, title=f"Decision Pack — {result.product.title}"),
+        encoding="utf-8",
+    )
 
     return filepath
 
@@ -448,6 +506,7 @@ def save_full_report(
     Save the combined full report to a file and return the file path.
 
     File naming: reports/<slug>_full_<timestamp>.md
+    Also saves an HTML version at the same path with .html extension.
     """
     out_dir = output_dir or REPORTS_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -459,5 +518,11 @@ def save_full_report(
 
     report_text = build_full_report(decision_result, launch_result)
     filepath.write_text(report_text, encoding="utf-8")
+
+    html_path = filepath.with_suffix(".html")
+    html_path.write_text(
+        _md_to_html(report_text, title=f"Full Intelligence Report — {decision_result.product.title}"),
+        encoding="utf-8",
+    )
 
     return filepath
