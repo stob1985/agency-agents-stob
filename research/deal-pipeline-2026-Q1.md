@@ -108,34 +108,87 @@
 
 ---
 
-## 🥈 2. SZÁMÚ STRATÉGIA: új építés (ground-up dev) — telek + ráépítés ≈ 600 e Ft/m² all-in
+## 🥈 2. SZÁMÚ STRATÉGIA: új építés (ground-up dev)
 
-> **Korrekció (felh. iránymutatás 2026 Q1):** új építésnél telek + építés + tervezés + közmű + engedélyek **≈ 600 e Ft/m² eladható alapterületen**. Ez a **direkt projektköltség**, finanszírozás/marketing/tartalék nélkül.
+> **Pontosított költségmodell (felh. + hogyanepitsunk.hu, 2026 Q1):**
+> - **Kulcsrakész kivitelezés (csak épület): 600–800 e Ft/m² nettó eladható** — alap, szerkezet, tető, nyílászárók, gépészet, villany, belső burkolat
+> - **Prémium műszaki tartalom** (hőszivattyú, okosotthon, AA+ szigetelés): 800 e – 1 M Ft/m²
+> - **Telek + telek-közműsítés + tervezés + engedélyezés + kert/kerítés** **MIND külön** tételek
+> - Társasházi projektnél 5–15%-kal olcsóbb /m² mint családi ház (skálagazdaság), de a központi gépészet/lift/tűzvédelem visszaeszi ezt — nettó ~azonos sáv
+> - Saját szervezés/alvállalkozói koordináció -10–15% vs. generálkivitelező
 
-### Tényleges Total Project Cost (TPC)
-| Tétel | Ráta | e Ft/m² |
+### Telek-költség → lakás m²-re vetítve
+A telekár hatása lakás m²-re a **szintterületi mutatótól (SZTM)** függ:
+
+`Telek-kt e Ft/m² lakás = (Telek_ár_eFt × Telek_m²) / (SZTM × Telek_m² × 0,85 nettó/bruttó)`
+
+| Övezet | Tipikus SZTM | Megjegyzés |
 |---|---|---|
-| Telek + építés + közmű + tervezés + engedély | (felh. adat) | **600** |
-| Kivitelezés alatti hitelköltség (24 hó × 50% LTV × 8%) | ~8% | 48 |
-| Marketing + értékesítés | 4% | 28 |
-| Tartalék (változás-igények, NAV, ügyvéd, ÁFA-cash flow) | 5% | 34 |
-| **TPC összes** | | **~710 e Ft/m²** |
+| Bp belső (V, VI, VII, VIII) | 3,0–4,5 | OTÉK Ln-1, magas pont |
+| Bp belső külső (IX, XIII, XIV) | 2,0–3,0 | Lk-2 / Ln-1 vegyes |
+| Bp külső (X, XV, XVII, XVIII) | 1,0–1,8 | Lke / Lk-1 |
+| Vidéki nagyváros társasházi | 0,8–1,5 | helyi HÉSZ függő |
+| Vidéki kisváros / agglomeráció | 0,6–1,2 | Lke dominál |
 
-> Megjegyzés: a TAO (9%) és az osztalékadó (15%) ezen felül jön az exit után — ezek 25–30% mutatós margin-ból ~17–20% nettóra hozzák a számot KFT-vel.
-
-### Exit-célok és margin a TPC-hez (~710 e Ft/m²) képest
-
-| Helyszín / szegmens | Exit (e Ft/m²) | Bruttó margin / revenue | Otthon Start fit |
+### Telek-ár benchmark (építhető lakás m²-re vetítve)
+| Lokáció | Telek-ár (Ft/m² telek) | Tipikus SZTM | **Telek e Ft/m² lakás** |
 |---|---|---|---|
-| **Bp belső külső** (IX, XIII, XIV, VIII külső) | 1500–1800 | **53–61%** | ⚠️ csak <80M Ft termékre |
-| **Bp külső** (X, XV, XVII, XVIII, XX) | 1100–1400 | **35–49%** | ✅ |
-| **Debrecen** Egyetem környéke | 1300 | **45%** | ✅ |
-| **Győr** Révfalu/Sziget | 1100–1400 | **35–49%** | ✅ |
-| **Székesfehérvár** Maroshegy (új építés tényleges piaci ár) | 1060–1220 | **33–42%** | ✅ |
-| **Veszprém / Kecskemét / Tatabánya** | 1000–1200 | **29–41%** | ✅ |
-| **Vác / Gödöllő / Dunakeszi** | 1100–1500 | **35–53%** | ✅ |
+| Bp V / VI / VII | 600 e – 1,5 M | 3,5 | **200–500** |
+| Bp IX / XIII / XIV | 250–500 e | 2,5 | **120–230** |
+| Bp X / XV / XVII | 80–200 e | 1,5 | **65–160** |
+| Vác / Gödöllő / Dunakeszi | 50–150 e | 1,2 | **50–150** |
+| Debrecen jó loc. | 80–200 e | 1,2 | **80–200** |
+| Győr Révfalu/Sziget | 100–250 e | 1,2 | **100–250** |
+| Székesfehérvár Maroshegy | 50–120 e | 1,2 | **50–120** |
+| Kecskemét / Veszprém / Tatabánya | 30–100 e | 1,0 | **35–120** |
 
-**Összes szegmens átlépi a 25% bruttó margint** a 600 e/m² all-in mellett. A 20–25% nettó margin elérése egyszerű, sőt **40%+ headroom** is van — a stratégia robusztus szabályozási és piaci rosszabbra fordulás esetén is.
+### Total Project Cost (TPC) modell — pontosított
+
+| Tétel | e Ft/m² lakás | Megjegyzés |
+|---|---|---|
+| **Kulcsrakész kivitelezés** | 600–700 | generál; saját szervezéssel 540–630 |
+| **Tervezés (építész + statika + gépész + villamos)** | 20–30 | 3–5% a kivitelezésből |
+| **Engedélyezés + szakhatóság + földhivatal** | 8–15 | |
+| **Telek-közművesítés** (víz/csat/gáz/áram bekötés) | 15–25 | telek-méret/lakás-szám függő |
+| **Kert + kerítés + külső munkák** | 10–20 | társasháznál a közös területre vetítve |
+| **Telek (lokáció szerint)** | **35–500** | lásd táblát feljebb |
+| **Hitelkt. (24 hó × 50% LTV × 8%)** | 45–55 | TPC ~6%-a |
+| **Marketing + értékesítés (4%)** | 25–35 | |
+| **Tartalék (változás-igények, NAV cash flow, ÁFA fix)** | 30–50 | |
+| **TPC összes** | **790 – 1430** | |
+
+**Konzervatív TPC számolás** (vidéki, közepes telek, generál):
+600 (kiv.) + 25 (terv.) + 12 (eng.) + 20 (közmű) + 15 (kert) + 80 (telek) + 50 (hitel) + 30 (mkt.) + 40 (tartalék) = **~872 e Ft/m²**
+
+**Optimalizált TPC** (vidéki, olcsó telek, saját szervezés):
+570 + 25 + 12 + 20 + 15 + 50 + 50 + 30 + 30 = **~802 e Ft/m²**
+
+### Margin újraszámolva — teljes TPC-vel (telek + közmű + tervezés + összes járulékos)
+
+| Helyszín | TPC e Ft/m² (közép) | Exit e Ft/m² | **Bruttó margin / revenue** | 25%+ nettó? |
+|---|---|---|---|---|
+| **Bp V / VI** prémium új ép. | ~1320 | 2000–2500 | **34–47%** | ✅ |
+| **Bp IX / XIII / XIV** | ~1010 | 1500–1800 | **33–44%** | ✅ |
+| **Bp X / XV / XVII** | ~920 | 1100–1400 | **16–34%** | ⚠️ exit-felső |
+| **Debrecen Egyetem** | ~940 | 1200–1300 | **22–28%** | ⚠️ szűk |
+| **Győr Révfalu/Sziget** | ~990 | 1100–1400 | **10–29%** | ❌ |
+| **Székesfehérvár Maroshegy** | ~895 | 1060–1220 | **16–27%** | ⚠️ |
+| **Vác / Gödöllő / Dunakeszi** | ~915 | 1100–1500 | **17–39%** | ⚠️ exit-felső |
+| **Kecskemét / Veszprém** | **~872** | 1000–1200 | **13–27%** | ⚠️ |
+| **Bp külső + saját szervezés** | ~830 | 1100–1400 | **25–41%** | ✅ |
+| **Vidék + saját szervezés + olcsó telek** | **~800** | 1100–1300 | **27–38%** | ✅ |
+
+> **Fő tanulság:** generálkivitelezővel + drága telekkel a vidéki Otthon Start-ár-plafon (~1100–1200 e Ft/m²) szűk a 25% nettó marginhoz. **Két vagy három manőver együttes alkalmazása szükséges**:
+> 1. **Olcsó telek vadászat** (≤80 e Ft/m² építhető terület → ≤100 e/m² lakás)
+> 2. **Saját szervezésű kivitelezés** (-10–15% a kulcsrakész árból)
+> 3. **Prémium pozícionálás vagy lokáció upgrade** (Bp belső külső vagy Vác belváros felé tolódás)
+>
+> Ezek kombinációjával **30–40% bruttó margin reális** → 22–28% nettó adózás után.
+
+> **Kulcsszabály:** ha a telek-költség 1 lakás-m²-re vetítve **>200 e Ft**, akkor a 25% margin csak prémium exit (>1500 e Ft/m²) szegmensben tartható. A vidéki Otthon Start-projekteknél a **telek-költség plafonja: 100–120 e Ft/m² lakás**.
+
+### Megjegyzés a TAO/osztalékadó hatásról
+TAO 9% + osztalék 15% (vagy KIVA-s konstrukció): a 30% bruttó margin ~21% nettó kifizethető nyereségre transzformálódik. A 25% nettó cél tehát **35%+ bruttó marginnál teljesül** — ez a Bp belső külső, Vác/Gödöllő, Debrecen Egyetem szegmensekben reális.
 
 ### Otthon Start-kompatibilis termék-spec (sweet spot)
 - **Méret:** 60–75 m² (Otthon Start hitel-plafon: 50 M Ft vidéken, 80 M Ft Bp.)
