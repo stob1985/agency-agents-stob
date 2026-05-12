@@ -129,6 +129,7 @@ def main() -> int:
         "niche-1-2-voice-compliance.md",
         "niche-3-4-ecom-internal-ai.md",
         "niche-5-practice-management.md",
+        "mvp-product-opportunities.md",
     ]
     out_dir = ROOT / "pdf"
     out_dir.mkdir(exist_ok=True)
