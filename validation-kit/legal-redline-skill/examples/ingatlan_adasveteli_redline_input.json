@@ -1,0 +1,139 @@
+{
+  "contract_title": "Ingatlan Adásvételi Szerződés — Budapest XVI. Hunyadvár u. 41/A 1/22",
+  "language": "hu",
+  "score": {
+    "current": 58,
+    "after_redline": 89,
+    "max": 100,
+    "grade": "C"
+  },
+  "summary": {
+    "high": 2,
+    "medium": 5,
+    "low": 3,
+    "verdict": "Aláírás előtt JAVÍTANI KELL — a vételár betűvel kiírt összege nem egyezik a számmal (33.500.000 Ft vs 'Hárommillió-ötszázezer'), és a bankszámla-szám üresen áll. Ezeket az aláírás előtt rendezni kell, különben jogvita esetén az értelmezés bizonytalan."
+  },
+  "changes": [
+    {
+      "section": "3.1",
+      "title": "KRITIKUS: Vételár szám/betű inkonzisztencia",
+      "severity": "high",
+      "original": "a kölcsönösen kialkudott 33.500.000.,- Forint, azaz Hárommillió-ötszázezer forint összegű vételár ellenében.",
+      "proposed": "a kölcsönösen kialkudott 33.500.000,- Forint, azaz Harminchárommillió-ötszázezer forint összegű vételár ellenében.",
+      "why": "A vételár számmal kiírva 33.500.000 Ft (harminchárommillió-ötszázezer), de betűvel 'Hárommillió-ötszázezer forint' szerepel — tízszeres eltérés. Jogvita esetén bíróság a szerződésértelmezés általános szabályai szerint (Ptk. 6:86. §) a felek tényleges akaratát vizsgálja, de a betűvel kiírt összeg gyakran prioritást kap az ellentmondás-feloldó szabályok szerint.",
+      "legal_basis": "Ptk. 6:86. § — szerződésértelmezés; Ptk. 6:8. § — jognyilatkozat értelmezése; ingatlan-adásvételi szerződésekben kialakult bírói gyakorlat",
+      "risk": "Ha valamelyik fél utólag a 3,5 millió forintos összegre hivatkozik, és a bíróság ezt elfogadja, akkor az eladók 30 millió forintot bukhatnak — vagy a vevő számára: a tulajdonszerzés érvénytelen lehet, és pereskedni kell.",
+      "protects": "Egyértelmű, vitathatatlan vételár, amely megfelel a felek tényleges megállapodásának.",
+      "tip": "Az aláírás előtt KÖTELEZŐ az okiratszerkesztő ügyvéddel javíttatni. Ne írd alá a hibás verziót — még a kis 'csak elírás' javítás is alapot adhat későbbi vitának."
+    },
+    {
+      "section": "3.3",
+      "title": "KRITIKUS: A bankszámla-szám üresen hagyva",
+      "severity": "high",
+      "original": "Felek megállapodnak, hogy Vevő a fennmaradó 32.500.000.-Ft, azaz harminckettőmillió-ötszázezer forint vételár-részletet legkésőbb 2022. március 9. napjáig átutalással fizeti meg az Eladó... számára az ...... Bank .....-nél vezetett ........ sz. bankszámlájára.",
+      "proposed": "Felek megállapodnak, hogy Vevő a fennmaradó 32.500.000,- Ft, azaz harminckétmillió-ötszázezer forint vételár-részletet legkésőbb 2022. március 9. napjáig az alábbi bankszámlákra történő átutalással fizeti meg: Eladó 1 részére [12345678-12345678-12345678] számlaszámra [40% = 13.000.000 Ft]; Eladó 2 részére [...] [40% = 13.000.000 Ft]; Eladó 3 részére [...] [10% = 3.250.000 Ft]; Eladó 4 részére [...] [10% = 3.250.000 Ft]. A bankszámlaszámok valódiságáért és helyességéért az Eladók egyetemlegesen felelnek; az ezekre a számlákra történő átutalás a Vevő részéről szerződésszerű teljesítésnek minősül.",
+      "proposed_minimum": "vagy alternatíva: külön ügyvédi letéti szerződés rendezi a vételár-részletek utalási rendjét, és annak a jelen szerződés szerves részét képező hivatkozása itt rögzítendő (letéti szerződés száma + dátuma).",
+      "why": "A szerződés ezen pontján a bankszámla-szám, a bank neve és az eladó neve is üresen áll. Ez az ingatlanszerződésben a legdrágább üresjárat — a vételár átutalási célpontja nincs definiálva. A tulajdonarányonkénti felosztás sincs kezelve (4/10, 4/10, 1/10, 1/10).",
+      "legal_basis": "Ptk. 6:130. § — pénztartozás teljesítése; Ptk. 6:42. § — egyetemleges követelés (több jogosult)",
+      "risk": "1) Ha utólag valaki más bankszámlaszámot diktál be (akár csalási szándékkal), a vevő rossz helyre utal — és nem teljesít szerződésszerűen. 2) Az eladók közötti felosztás vitatott — a négy eladó között konfliktus alakulhat ki. 3) Ha 4 különböző számlára kell utalni, az utalási költség és időzítés is fontos.",
+      "protects": "Egyértelmű, ellenőrizhető fizetési cél; a vevő szerződésszerű teljesítésének igazolhatósága; eladók közötti vita megelőzése.",
+      "tip": "Az aláíráskor MINDEN bankszámlaszámot ki kell tölteni, és ellenőrizni a tulajdonosokat (név egyezés). Bankkártya-arcfelvétel vagy bank által kiadott igazolás javasolt mellékletként."
+    },
+    {
+      "section": "1.2",
+      "title": "TAKARNET megrendelésszám üresen hagyva",
+      "severity": "medium",
+      "original": "a TAKARNET rendszerből 2022.03.01. napján lekért, .................. megrendelésszámú tulajdoni lap másolattal igazolja",
+      "proposed": "a TAKARNET rendszerből 2022.03.01. napján lekért, [konkrét megrendelésszám] számú, jelen szerződés 1. számú mellékletét képező tulajdoni lap másolattal igazolja",
+      "why": "A tulajdoni lap a tulajdonjog igazolásának alapja. A megrendelésszám hiánya és a tulajdoni lap mellékletként való rögzítésének elmaradása esetén utólag nem dokumentálható, hogy az aláíráskor valóban tehermentes volt-e az ingatlan.",
+      "legal_basis": "Inytv. 5. § — közhitelesség; Ptk. 5:35. § — ingatlan-nyilvántartáson alapuló bizalom elve",
+      "risk": "Ha az aláírás és a tulajdonjog-bejegyzés között új teher kerül be (pl. végrehajtás, jelzálog), a vevő nehezen tudja bizonyítani, hogy az aláíráskor még tehermentes volt — ami az eladók szavatossági felelősségét kérdőjelezi meg.",
+      "protects": "Az aláíráskor lekért tulajdoni lap dokumentált bizonyítéka — pereskedés esetén egyértelmű hivatkozási alap.",
+      "tip": "A TAKARNET-lekérést PDF-ben mellékelni a szerződéshez, és aláíráskor a megrendelésszámot bejegyezni."
+    },
+    {
+      "section": "3.1",
+      "title": "Feltűnő értékaránytalanság jogáról lemondás",
+      "severity": "medium",
+      "original": "a Ptk. 6:98 § (1) bekezdése alapján a felek tárgyi szerződés vonatkozásában a feltűnő értékaránytalanság szabályainak alkalmazását kifejezetten kizárják, tárgyi szerződés megtámadásának jogáról értékaránytalanság címen jelen szerződés aláírásával egyidejűleg lemondanak.",
+      "proposed": "Felek rögzítik, hogy a kialkudott vételár a piaci áraknak megfelel, és kölcsönös egyetértéssel, az ajándékozás szándéka nélkül állapították meg. Felek tudomással bírnak a Ptk. 6:98. § (1) szerinti, feltűnő értékaránytalanság miatti megtámadási jogról és annak feltételeiről.",
+      "why": "A feltűnő értékaránytalanság miatti megtámadási jogról való előzetes lemondás a Ptk. 6:98. § (3) szerint LEHETSÉGES, de a vevő számára aszimmetrikus kockázat. Ha utólag kiderül, hogy az ingatlan valós forgalmi értéke jelentősen magasabb (pl. eltitkolt értéknövelő körülmény miatt), a vevő nem tudja megtámadni.",
+      "legal_basis": "Ptk. 6:98. § (1)-(3) — feltűnő értékaránytalanság",
+      "risk": "Ha az ingatlan valós piaci értéke utólag 45-50 millió forintnak bizonyul (pl. korábbi értékbecslés szerint), a vevő nem tudja a szerződést megtámadni — pedig erre törvényi joga lenne.",
+      "protects": "A vevő megőrzi azt a fontos jogát, hogy ha utólag bizonyíthatóan eltitkolt körülmény miatt feltűnő értékaránytalanság áll fenn, a Ptk. szerinti jogvédelem rendelkezésére áll.",
+      "tip": "Az eladók ezt a klauzulát szokták kérni (saját védelmükre). A vevő alkupozíciójának függvénye — de legalább kérj cserébe értékbecslést a szerződéshez mellékelve."
+    },
+    {
+      "section": "4.8",
+      "title": "Eladói késedelmi kötbér aránytalanul alacsony",
+      "severity": "medium",
+      "original": "úgy a feltételek beálltát követő 5 (öt) nap elteltét követően minden késedelmes nap után 5.000,- Forint – azaz ötezer Forint – összegű kötbért kötelesek Vevőnek megfizetni.",
+      "proposed": "úgy a feltételek beálltát követő 5 (öt) nap elteltét követően minden késedelmes nap után 50.000,- Forint – azaz ötvenezer Forint – összegű kötbért kötelesek egyetemlegesen Vevőnek megfizetni. A kötbér összege a teljes vételár 0,15 ezreléke / nap, ami egy 33,5 millió forintos ingatlannál arányos.",
+      "why": "Az 5.000 Ft/nap kötbér egy 33.500.000 Ft-os ingatlannál nevetségesen alacsony — a vételár 0,015 ezreléke naponta. Ennyi pénzért az eladóknak nem éri meg sietniük. Egy 30 napos késedelem mindössze 150.000 Ft büntetés.",
+      "legal_basis": "Ptk. 6:186-188. § — kötbér szabályai; a bírói gyakorlat alapján egy ingatlan adásvételnél reális kötbér a vételár 0,1-0,2 ezreléke / nap",
+      "risk": "Ha az eladók a birtokátruházást húzzák (pl. mert még nem találnak új lakást), a vevőnek nincs valós érdekérvényesítő eszköze. 30 nap késedelem = 150.000 Ft kompenzáció — miközben a vevő lakhatási költségei (szállodai, albérleti) ennek a többszöröse lehetnek.",
+      "protects": "Reális ösztönző az eladóknak a határidők betartására, arányos kompenzáció a vevőnek esetleges késedelemkor.",
+      "tip": "A 0,1-0,2 ezrelékes napi kötbér iparági standard. Az eladók ezt általában elfogadják, mert tudják, hogy az ő érdekük sem a húzódás."
+    },
+    {
+      "section": "6.1",
+      "title": "Lakcímkijelentkezés enforcement nélkül",
+      "severity": "medium",
+      "original": "Eladók kijelentik továbbá, hogy az ingatlanba más gazdasági társaság vagy szervezet székhelye, telephelye, fióktelepe, más jellegű lerakata bejelentve nincs, abból a birtok átruházásig minden, lakcímnyilvántartás-szerűen bejelentett személy kijelentkezik.",
+      "proposed": "Eladók kijelentik továbbá, hogy az ingatlanba más gazdasági társaság vagy szervezet székhelye, telephelye, fióktelepe, más jellegű lerakata bejelentve nincs. Az Eladók kötelezettséget vállalnak arra, hogy a birtokátruházás napjáig az ingatlanban lakcímnyilvántartás szerint bejelentett valamennyi személyt (saját magukat is beleértve) ki-, illetve átjelentik más címre, és erről a kormányhivatal által kiállított igazolást a birtokátruházáskor a Vevő részére bemutatják. Amennyiben az Eladók e kötelezettségüknek nem tesznek eleget, a Vevő jogosult a 4.8 pont szerinti napi kötbért követelni mindaddig, amíg a kijelentkezés meg nem történik, valamint az Eladók egyetemlegesen kötelesek megtéríteni a Vevő részére minden ebből fakadó kárt és költséget (pl. peres eljárás költségei).",
+      "why": "Az eredeti szöveg csak ÍGÉRETET tartalmaz a kijelentkezésről, de NINCS következménye, ha az eladók nem teljesítik. Ha a vevő beköltözik és az eladók még be vannak jelentve, a vevő nem tud teljes lakcímrendezést végezni, és a posta/adminisztratív zavarok mellett bizonyos jogi következmények is (pl. közüzemi tartozások további címzettje, idézés kézbesítése).",
+      "legal_basis": "2018. évi CXIII. tv. (Nytv.) — lakcím bejelentés; Ptk. 6:159. § — szerződésszegés jogkövetkezményei",
+      "risk": "Ha az eladók nem jelentkeznek ki, hónapokig tarthat a hivatali rendezés (kérvény a kormányhivatalhoz, dokumentumokkal), és a vevő közben a saját lakásába nem tudja a maga lakcímét bejelenteni teljes körűen.",
+      "protects": "Tényleges, kikényszeríthető kijelentkezési kötelezettség; igazolásos teljesítés; kötbér enforcement.",
+      "tip": "Az igazolást a birtokátruházásnál bemutatni kell — ez egyetlen formanyomtatvány a kormányablakból, az eladóknak nem terhes."
+    },
+    {
+      "section": "4.4",
+      "title": "Rejtett hibák szavatossága túl gyenge",
+      "severity": "medium",
+      "original": "Eladók kijelentik, hogy legjobb tudomásuk szerint az ingatlanoknak rejtett hibája nincs, továbbá nincs tudomásuk olyan hibáról, körülményről, ami gátolná, illetőleg zavarná az ingatlan, valamint az ingatlan gépészeti berendezéseinek rendeltetésszerű használatát.",
+      "proposed": "Eladók kijelentik, hogy az ingatlannak rejtett hibája nincs (különös tekintettel a beázásra, dúcoltságra, statikai problémákra, penészedésre, hő-, hang-, vízszigetelési hiányosságokra, gépészeti berendezések, elektromos hálózat, csőhálózat rendeltetésszerű használatát akadályozó körülményekre), továbbá az ingatlan állagát befolyásoló minden lényeges körülményről a Vevőt tájékoztatták. Eladók a Ptk. 6:171-176. § szerinti kellékszavatossági kötelezettségükért egyetemlegesen tartoznak helytállni. A 'legjobb tudomásuk szerint' fordulat nem alkalmazandó.",
+      "why": "A 'legjobb tudomásuk szerint' szófordulat a magyar bírói gyakorlat szerint jelentősen gyengíti a kellékszavatossági felelősséget — az eladóknak elég azt mondaniuk: 'nem tudtunk a hibáról'. A vevő pedig nem tudja bizonyítani, hogy az eladók tudtak róla. A használt ingatlan esetén a vevő jogai eleve korlátozottak, ez a klauzula tovább rontja a helyzetet.",
+      "legal_basis": "Ptk. 6:171-176. § — kellékszavatosság; Ptk. 6:177. § — jogszavatosság",
+      "risk": "Ha aláírás után derül ki, hogy a fürdőszobában rejtett beázás van, vagy a falak penészedettek a tapéta alatt, a vevő nehezen érvényesítheti a 100-200 ezer (vagy milliós) javítási költséget az eladókkal szemben.",
+      "protects": "A vevő érdemi kellékszavatossági védelme; bizonyítási nehézségek áthárítása az eladókra (akiknek bizonyítaniuk kell, hogy NEM tudtak a hibáról, és nem a vevőnek, hogy IGEN tudtak).",
+      "tip": "Műszaki állapotfelmérés (általában 30-50.000 Ft) aláírás előtt — ha a felmérés nem tár fel hibát, és utólag mégis kiderül, a kellékszavatosság erős."
+    },
+    {
+      "section": "3.4",
+      "title": "Tulajdonjog-bejegyzési engedély letét: 'kerülhet' gyenge megfogalmazás",
+      "severity": "low",
+      "original": "Vevő az 1.1 pontban meghatározott Ingatlanra vonatkozó tulajdonjogának bejegyzésére szolgáló tulajdonjog bejegyzési engedély a felek között létrejött ügyvédi letéti szerződés rendelkezései szerint legkésőbb a vételár megfizetését követő 5 (öt) munkanapon belül benyújtásra kerülhet az illetékes földhivatalhoz a Vevő tulajdonjogának bejegyzése érdekében.",
+      "proposed": "Vevő az 1.1 pontban meghatározott Ingatlanra vonatkozó tulajdonjogának bejegyzésére szolgáló tulajdonjog bejegyzési engedély a felek között létrejött ügyvédi letéti szerződés rendelkezései szerint a vételár hiánytalan megfizetését követő 5 (öt) munkanapon belül benyújtásra kerül az illetékes földhivatalhoz a Vevő tulajdonjogának bejegyzése érdekében. A benyújtás elmulasztásáért az okiratszerkesztő ügyvéd, mint Letéteményes felel.",
+      "why": "A 'kerülhet' (megengedő) szóhasználat helyett 'kerül' (kötelező) kell. A vevő számára ez biztosítja, hogy a vételár megfizetése után automatikusan beadásra kerüljön a bejegyzési engedély — nem opcionális.",
+      "legal_basis": "Ptk. 6:8. § — jognyilatkozat értelmezése; Inytv. 47/A § (1) b)",
+      "risk": "Ha a 'kerülhet' szót szigorúan értelmezzük, a benyújtás opcionális — a vevő nem tudja kikényszeríteni. Bár a kontextus egyértelmű, a bíróság a szó szerinti értelmezést is figyelembe veheti.",
+      "protects": "Egyértelmű, kötelező teljesítési határidő; a vevő tulajdonjog-szerzésének gyorsabb és biztosabb földhivatali rögzítése.",
+      "tip": "Apró módosítás — a legtöbb ügyvéd elfogadja, ha rákérdezel."
+    },
+    {
+      "section": "Numbering",
+      "title": "Hiányzó 7.7 pont a számozásból",
+      "severity": "low",
+      "original": "7.6. ... [7.6 után közvetlenül] 7.8. A Felek rögzítik, hogy Dr. Koncz Nikolette ügyvédet...",
+      "proposed": "[7.6 után közvetlenül] 7.7. [pont száma javítva 7.8-ról 7.7-re, és az összes további számozás 7.7-ről indul lefelé folytatva]",
+      "why": "A számozás kihagyja a 7.7-et — közvetlenül 7.6 után 7.8 jön. Ez az okiratszerkesztés alapossági hibája. Önmagában nem jogi probléma, de jelzi, hogy a szerződést egy korábbi verzióból szerkesztették és a számozás nem lett egységesítve.",
+      "legal_basis": "Nincs konkrét jogszabályi sértés — minőségi jelzés.",
+      "risk": "Hivatkozási problémák utólag (pl. 'a 7.7. pont szerint'), bíró rosszallása, későbbi szerződésmódosításnál zavar.",
+      "protects": "Tiszta dokumentum; nem ad alapot későbbi vitának arról, hogy 'mit jelent a hiányzó 7.7. pont'.",
+      "tip": "Az ügyvédet megkérheted, hogy az aláírás előtt javítsa — 5 perces munka."
+    },
+    {
+      "section": "7.8",
+      "title": "Verőce postai kód elírás (2621 vs 2021)",
+      "severity": "low",
+      "original": "Szuper és Társai Ügyvédi Iroda; 2621 Verőce, Árpád út 116. [...] [signature block:] 2021 Verőce, Árpád út 116.",
+      "proposed": "[helyes postai kód mindkét helyen] 2621 Verőce, Árpád út 116. [Megjegyzés: Verőce irányítószáma valóban 2621, az aláírási blokkban szereplő '2021' typo, javítandó]",
+      "why": "Az ügyvédi iroda címe a szerződésben kétszer szerepel, és a két helyen különböző postai kód van (2621 vs 2021). Verőce valós postai kódja 2621. Az aláírási blokkban lévő '2021' hibás.",
+      "legal_basis": "Nincs konkrét jogszabályi sértés.",
+      "risk": "Ha utólag postázni kell az ügyvédnek (pl. földhivatali hibásított kézbesítés), a hibás cím késedelmet okoz.",
+      "protects": "Egyértelmű, pontos kapcsolattartási cím.",
+      "tip": "Az ügyvédet megkérni, hogy javítsa — pillanatok alatt."
+    }
+  ]
+}
