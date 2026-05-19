@@ -1,0 +1,137 @@
+{
+  "contract_title": "Vállalkozási szerződés — Magnum Solutions Kft.",
+  "language": "hu",
+  "score": {
+    "current": 22,
+    "after_redline": 84,
+    "max": 100,
+    "grade": "F"
+  },
+  "summary": {
+    "high": 8,
+    "medium": 6,
+    "low": 4,
+    "verdict": "NE írd alá jelenlegi formájában — színlelt szerződés (NAV-kockázat 5-7 M Ft/év), Szjt. szerint semmis kikötések, törvényileg érvénytelen 36 hónapos versenytilalom."
+  },
+  "changes": [
+    {
+      "section": "1.3",
+      "title": "Heti 40 óra + kötelező irodai jelenlét = bujtatott munkaviszony",
+      "severity": "high",
+      "original": "Vállalkozó köteles heti minimum 40 órát a Megrendelő részére dolgozni, és hétfőtől péntekig 9:00–18:00 között köteles a Megrendelő budapesti irodájában személyesen jelen lenni. Vállalkozó köteles a Megrendelő által biztosított eszközöket használni.",
+      "proposed": "Vállalkozó a Szolgáltatásokat saját időbeosztása szerint, saját helyén és saját eszközeivel látja el. A felek a kommunikációhoz heti rendszerességű, max. 60 perces státusz-egyeztetést tartanak online formában.",
+      "why": "Heti 40 óra kötött munkaidő + kötelező irodai jelenlét + megrendelői eszközhasználat klasszikus munkaviszony-ismérvek. A 7001/2005. (MK 170.) FMM-PM együttes irányelv és állandó NAV-gyakorlat alapján színlelt szerződés gyanúja merül fel.",
+      "legal_basis": "Mt. 27. § (2), Ptk. 6:92. § (színlelt szerződés), 7001/2005. FMM-PM irányelv",
+      "risk": "NAV utólagos minősítés esetén 5 évre visszamenőleg járulék + SZJA + adóbírság (akár 200%) + mulasztási bírság. A 9 M Ft éves díj alapján a kockázat 5-7 M Ft/év nagyságrendű. Szándékos színleltség esetén Btk. 403. § (költségvetési csalás) is felmerülhet.",
+      "protects": "A vállalkozói státusz fenntartható, az adminisztratív és NAV-kockázat eltűnik.",
+      "tip": "Ha a tényleges munkavégzés mégis kötött idejű és helyű, javasolj munkaszerződést — az tisztább jogi viszony minden szempontból."
+    },
+    {
+      "section": "2.3",
+      "title": "Határozatlan idejű fizetésfelfüggesztés",
+      "severity": "high",
+      "original": "Megrendelő a számlát annak kézhezvételétől számított 8 napon belül köteles megfizetni — amennyiben azonban a Megrendelő bármely teljesítésre kifogást emel, a fizetési kötelezettség határozatlan időre felfüggesztésre kerül.",
+      "proposed": "Megrendelő a számlát annak kézhezvételétől számított 30 napon belül köteles megfizetni. Amennyiben Megrendelő a számla egy részét kifogásolja, az nem vitatott részt a határidőn belül megfizeti, a vitatott rész tekintetében a kifogást a számla kézhezvételétől számított 8 napon belül írásban, indokolással köteles előterjeszteni.",
+      "why": "A korlátlan idejű fizetésfelfüggesztés tisztességtelen szerződési feltétel — gazdaságilag kiszolgáltatja a vállalkozót, és lehetővé teszi a megrendelő számára, hogy bármilyen ürüggyel halogassa a fizetést.",
+      "legal_basis": "Ptk. 6:104. § (2) b) — tisztességtelen ÁSZF-kikötés; Ptk. 6:130. § — 30 napos fizetési határidő szabálya",
+      "risk": "Hónapokon át kifizetetlen számlák, cash flow összeomlás, kényszerű peresedés.",
+      "protects": "Garantált 30 napos fizetés, vitarendezés tiszta keretben.",
+      "tip": "Adj 8%-os késedelmi kamatot kötbéren felül — ez a megrendelőt gyors fizetésre ösztönzi."
+    },
+    {
+      "section": "3.1",
+      "title": "Korlátlan IP-átruházás, akár nem kapcsolódó művekre is",
+      "severity": "high",
+      "original": "A jelen szerződés időtartama alatt Vállalkozó által létrehozott valamennyi szellemi alkotás — függetlenül attól, hogy az a Szolgáltatásokhoz kapcsolódik-e — kizárólagosan a Megrendelőt illeti.",
+      "proposed": "A Vállalkozó által a Szolgáltatások keretében, Megrendelő részére kifejezetten kifejlesztett művek vagyoni jogai a teljesítést és a díj megfizetését követően átszállnak a Megrendelőre. A Vállalkozó által korábban létrehozott vagy a szerződéssel össze nem függő alkotások továbbra is a Vállalkozó tulajdonát képezik.",
+      "why": "A 'függetlenül attól, hogy a Szolgáltatásokhoz kapcsolódik-e' megfogalmazás minden szellemi alkotást — még a hobbi-projekteket, más ügyfelek számára végzett munkát is — a Megrendelőre ruház át. Ez tisztességtelen.",
+      "legal_basis": "Ptk. 6:102. § (tisztességtelen feltétel), Szjt. 16. § (4)-(5) — felhasználási ellenérték joga",
+      "risk": "Saját könyvtáraidat, korábban fejlesztett kódjaidat, hobbi-projekted is elveszítheted.",
+      "protects": "Csak a kifejezetten Megrendelő számára végzett munka kerül át, a Prior IP-d megmarad.",
+      "tip": "Mellékletként adj át egy 'Prior IP' listát a meglévő anyagaidról — ez bizonyíték a tulajdonjogra."
+    },
+    {
+      "section": "3.3",
+      "title": "Személyhez fűződő jogokról lemondás — eleve semmis",
+      "severity": "high",
+      "original": "Vállalkozó lemond a szerzői személyhez fűződő jogairól, ideértve a névfeltüntetéshez való jogot is.",
+      "proposed": "Felek megállapodnak abban, hogy a Vállalkozó szerzői személyhez fűződő jogai a hatályos jogszabályok szerint érintetlenül megmaradnak. A névfeltüntetés módjáról a felek külön írásban állapodhatnak meg.",
+      "why": "A szerzői személyhez fűződő jogok (különösen a névfeltüntetéshez való jog) forgalomképtelenek — róluk érvényesen lemondani NEM LEHET. Ez a kikötés a magyar szerzői jogi törvény szerint eleve semmis.",
+      "legal_basis": "Szjt. 9. § (2) — szerzői személyhez fűződő jog elidegeníthetetlen; Szjt. 12. § — névfeltüntetés joga",
+      "risk": "A klauzula érvénytelen, így a megrendelő hamis biztonságban él. Vitás helyzetben a vállalkozó él a jogával, a megrendelő üzleti tervei sérülhetnek.",
+      "protects": "Tisztázott helyzet, a felek tudnak róla, hogy ez a jog megmarad.",
+      "tip": "Ha a megrendelő nem akarja a nevedet feltüntetni a műben, ezt kérje külön — de bizonyos művek (pl. szoftver) esetén ez gyakran üzletileg elfogadható kompromisszum."
+    },
+    {
+      "section": "5.1",
+      "title": "36 hónapos versenytilalom EU-szerte, ellenérték nélkül",
+      "severity": "high",
+      "original": "Vállalkozó kötelezi magát arra, hogy a jelen szerződés időtartama alatt, valamint annak bármely okból történő megszűnését követő 36 hónapon belül semmilyen formában nem végez a Megrendelő tevékenységi körébe tartozó tevékenységet, sem önállóan, sem alkalmazottként, sem közreműködőként, Magyarország és az Európai Unió teljes területén. A versenytilalmi kötelezettségért semmilyen ellenérték nem jár.",
+      "proposed": "Vállalkozó a szerződés megszűnését követő 12 hónapon belül nem nyújt szolgáltatást a Megrendelő által közvetlenül megnevezett legfeljebb 3 versenytársának, Magyarország területén. A Megrendelő a versenytilalmi kötelezettségért havonta az utolsó havi vállalkozói díj 50%-ának megfelelő összeget fizet ellenérték gyanánt.",
+      "why": "A 36 hónapos, EU-szerte érvényes, ellenérték nélküli versenytilalom ütközik a magyar és uniós joggal. Az Mt. 228. § kifejezetten ellenértéket követel meg (min. alapbér 1/3-a), és maximum 2 évet enged.",
+      "legal_basis": "Mt. 228. § — versenytilalmi megállapodás (ellenérték, max 2 év), Ptk. 6:102. § — tisztességtelen szerződési feltétel, Alaptv. XII. cikk — vállalkozáshoz való jog. Bírói gyakorlat: BH2008.94 — ellenérték nélküli versenytilalom érvénytelen.",
+      "risk": "Megélhetésed lehetetlenné válik 3 évre — érvénytelen, de érvényesítési kísérlet komoly perköltséget okoz.",
+      "protects": "Reális, kifizetett versenytilalom; szabad munkavégzés a többi piacon.",
+      "tip": "Ha a megrendelő ragaszkodik a hosszú tilalomhoz, kérj magasabb ellenértéket — a piac általában elfogadja a 'fizetett non-compete' modellt."
+    },
+    {
+      "section": "6.1",
+      "title": "Korlátlan kárfelelősség + előreláthatósági korlát kizárása",
+      "severity": "high",
+      "original": "Vállalkozó a Megrendelő részére okozott valamennyi kárt — beleértve az elmaradt hasznot, a következménykárokat és harmadik személyek által támasztott bármilyen igényt — köteles maradéktalanul megtéríteni, összegszerű felső korlát nélkül. Vállalkozó ezúton lemond a Polgári Törvénykönyv szerinti előreláthatósági korlátozás alkalmazásáról.",
+      "proposed": "Vállalkozó felelőssége a Megrendelővel szemben — a szándékos szerződésszegés és a Ptk. 6:152. § szerinti kivételek kivételével — az adott szerződéses évben fizetett vállalkozói díj összegéig terjed. A Ptk. 6:143. § (2) szerinti előreláthatósági korlát alkalmazandó.",
+      "why": "A korlátlan felelősség egy normál vállalkozási szerződésben aránytalan. A megrendelő nyereség-kockázata teljes mértékben átkerül a vállalkozóra. Az előreláthatósági korlát lemondása semmis.",
+      "legal_basis": "Ptk. 6:143. § (2) — előreláthatósági szabály, Ptk. 6:152. § — szándékos károkozásnál a kizárás semmis",
+      "risk": "Egy hibás vagy késedelmes teljesítés a vállalkozó teljes vagyonát követelheti — csőd lehetséges.",
+      "protects": "Reális, korlátozott felelősség; a szándékos vagy súlyos kötelezettségszegés továbbra is teljes felelősséggel jár.",
+      "tip": "Köss szakmai felelősségbiztosítást a felelősségkorlát összegéig — a megrendelő ezt gyakran elfogadja garanciaként."
+    },
+    {
+      "section": "6.3",
+      "title": "Megrendelői felelősség max 50 000 Ft — aszimmetria",
+      "severity": "medium",
+      "original": "A Megrendelő kártérítési felelőssége a Vállalkozó felé legfeljebb 50 000 Ft összegig terjedhet, bármely jogcímen.",
+      "proposed": "A felek kölcsönös felelősségvállalása az adott szerződéses évben fizetett vállalkozói díj összegéig terjed, kivéve a szándékos szerződésszegést és a Ptk. 6:152. § szerinti kivételeket.",
+      "why": "A Vállalkozó korlátlan felelőssége + 50 000 Ft megrendelői plafon nyilvánvaló aszimmetria. A megrendelő gyakorlatilag bármilyen szerződésszegéssel megúszhatja minimális kockázattal.",
+      "legal_basis": "Ptk. 6:102. § — nyilvánvalóan tisztességtelen kikötés",
+      "risk": "Ha a megrendelő nem fizet, vagy szerződésszegése miatt veszítesz el más munkát, max 50 000 Ft-ot tudsz érvényesíteni.",
+      "protects": "Kölcsönös, reális felelősségi keret.",
+      "tip": "A 'kölcsönös cap' standard szövegezés — ezt a megrendelők nem szokták elutasítani."
+    },
+    {
+      "section": "7.2",
+      "title": "ÁSZF egyoldalú módosítása tájékoztatás nélkül",
+      "severity": "high",
+      "original": "A Megrendelő jogosult az ÁSZF-et bármikor, egyoldalúan módosítani. A módosítás Vállalkozó részére írásbeli tájékoztatás nélkül is hatályba lép.",
+      "proposed": "Az ÁSZF módosítását a Megrendelő legalább 30 nappal a hatálybalépés előtt írásban közli a Vállalkozóval. Amennyiben a Vállalkozó a módosítást a hatálybalépés előtti 15 napon belül írásban kifogásolja, jogosult a szerződést rendkívüli felmondással megszüntetni.",
+      "why": "Tájékoztatás nélküli egyoldalú szerződésmódosítás semmis. A megrendelő bármikor a vállalkozó hátrányára változtathatja a feltételeket — ez gyakorlatilag illuzórikus szerződés.",
+      "legal_basis": "Ptk. 6:78. § (2), 6:104. § (2) j), 6:191. § — egyoldalú szerződésmódosítás szabályai",
+      "risk": "A megrendelő egy hét alatt megduplázhatja a kötbéreket vagy szigoríthatja a határidőket — anélkül, hogy tudnál róla.",
+      "protects": "Stabil szerződéses keret, módosítás csak előzetes értesítéssel és kifogási joggal.",
+      "tip": "Ha a megrendelő ragaszkodik az ÁSZF-hez, kérd a teljes szövegét melléklet formájában — így ami benne van, abba beleegyezel, ami később jön, nem."
+    },
+    {
+      "section": "8.1",
+      "title": "Aszimmetrikus felmondás — Megrendelő bármikor, Vállalkozó 90 nap",
+      "severity": "high",
+      "original": "A Megrendelő a szerződést bármikor, indokolás nélkül, azonnali hatállyal megszüntetheti. Vállalkozó a szerződést 90 napos felmondási idővel, kizárólag írásban szüntetheti meg, és csak abban az esetben, ha valamennyi folyamatban lévő feladatot a Megrendelő számára kielégítően lezárt. Vállalkozó általi felmondás esetén a Vállalkozó elveszíti a kifizetetlen díjakra vonatkozó jogosultságát.",
+      "proposed": "Bármely fél a szerződést 30 napos felmondási idővel, írásban felmondhatja. Megrendelő általi felmondás esetén Vállalkozót megilleti a teljesített munka arányos díja, valamint a folyamatban lévő munkák befejezésének ésszerű költsége. Vállalkozó általi felmondás esetén a már teljesített munka ellenértéke ugyancsak megilleti.",
+      "why": "Aszimmetrikus felmondás + díjelvesztés a vállalkozó oldalán súlyosan tisztességtelen. A Ptk. 6:249. § kifejezetten kimondja, hogy a vállalkozót a teljesített rész díja megilleti — a 8.3 ezzel kifejezetten ütközik.",
+      "legal_basis": "Ptk. 6:249. § — vállalkozási szerződés felmondása, Ptk. 6:102. § — tisztességtelen kikötés",
+      "risk": "Hónapokig dolgoztál, a megrendelő bármikor felmondhat, te 0 forintot kapsz az utolsó hónapokra.",
+      "protects": "A teljesített munkáért minden esetben jár a díj; szimmetrikus, reális felmondási idő.",
+      "tip": "A '30 napos kölcsönös felmondás + teljesített rész díja' iparági standard — könnyen elfogadtatható."
+    },
+    {
+      "section": "10.1",
+      "title": "Egyoldalú szerződésmódosítás — semmis",
+      "severity": "medium",
+      "original": "A jelen szerződés módosítására a Megrendelő egyoldalúan is jogosult, írásbeli értesítéssel.",
+      "proposed": "A jelen szerződés módosítása kizárólag mindkét fél által aláírt, írásbeli megállapodással lehetséges.",
+      "why": "Szerződés módosításához mindkét fél hozzájárulása szükséges — ez polgári jogi alapelv. Az ilyen egyoldalú módosítási jog semmis.",
+      "legal_basis": "Ptk. 6:191. § — szerződés módosítása, Ptk. 6:104. § (2) j) — tisztességtelen kikötés",
+      "risk": "Hamis biztonságérzet a megrendelőnél; vitás esetekben a klauzula érvényesíthetetlen.",
+      "protects": "Tiszta jogi keret, mindkét fél azonos pozícióban a módosításokról."
+    }
+  ]
+}
