@@ -10,6 +10,16 @@ These examples answer the question: *"What does it actually look like when the f
 
 ## Contents
 
+### [workflow-dynamic-ecommerce-growth.md](./workflow-dynamic-ecommerce-growth.md)
+
+**What:** A *dynamic*, data-driven workflow that re-routes itself based on live signals instead of following a fixed script.
+
+**The scenario:** An e-commerce growth engine wired to live MCP integrations — Trendtruck (trend/competitor research), Shopify (offer + analytics), Higgsfield (creative generation + virality prediction), Meta Ads (campaign launch + insights), and Google Drive (memory). Decision gates inspect real metrics at each step: untrending products loop back to research, low-scoring creatives regenerate before any spend, and ad sets scale, iterate, or kill themselves based on ROAS.
+
+**Agents used:** Product Trend Researcher, Cross-Border E-Commerce, Paid Media Creative Strategist, Paid Social Strategist, Paid Media Auditor, Growth Hacker.
+
+**Key takeaway:** The workflow only advances when the data earns it — feedback loops route losing products and creatives *backward*, protecting ad spend.
+
 ### [nexus-spatial-discovery.md](./nexus-spatial-discovery.md)
 
 **What:** A complete product discovery exercise where 8 agents worked in parallel to evaluate a software opportunity and produce a unified plan.
