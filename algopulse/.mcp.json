@@ -1,0 +1,18 @@
+{
+  "$comment": "MCP servers powering the AlgoPulse research agent. Run via `npx @smithery/cli run <server>` or connect in Claude Code. The web app itself talks to public APIs directly; this layer is for the agent that writes deep-dive reports, scans news and pushes alerts.",
+  "mcpServers": {
+    "coingecko": {
+      "command": "npx",
+      "args": ["-y", "@smithery/cli@latest", "run", "@nic0xflamel/coingecko-mcp-server"]
+    },
+    "ccxt": {
+      "command": "npx",
+      "args": ["-y", "@smithery/cli@latest", "run", "mcp-server-ccxt"]
+    },
+    "coinmarketcap": {
+      "command": "npx",
+      "args": ["-y", "@smithery/cli@latest", "run", "alexander-herranz/coinmarketcap-mcp"],
+      "env": { "CMC_API_KEY": "${CMC_API_KEY}" }
+    }
+  }
+}
