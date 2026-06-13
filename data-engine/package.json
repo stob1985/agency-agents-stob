@@ -1,0 +1,17 @@
+{
+  "name": "narrative-data-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent-driven crypto intelligence data engine: Narrative Heat Index + Token Event Feed, sold via API.",
+  "scripts": {
+    "ingest": "node --experimental-sqlite src/ingest.js",
+    "serve": "node --experimental-sqlite src/server.js",
+    "seed-keys": "node --experimental-sqlite src/seed.js",
+    "demo": "node --experimental-sqlite src/seed.js && node --experimental-sqlite src/ingest.js && node --experimental-sqlite src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "fast-xml-parser": "^4.5.1"
+  }
+}
